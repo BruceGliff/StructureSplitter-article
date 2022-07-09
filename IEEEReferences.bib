@@ -39,3 +39,47 @@ CTLdash_repeated_names   = "no",
     howpublished = "https://www.intel.com/content/www/us/en/develop/documentation/oneapi-gpu-optimization-guide",
     title = "Intel Xe arch"
 }
+
+@misc{render,
+    howpublished = "https://renderpool.net/blog/cpu-vs-gpu-rendering/",
+    title = "CPU vs GPU rendering"
+}
+
+@misc{CNN,
+    howpublished = "https://datamadness.github.io/TensorFlow2-CPU-vs-GPU",
+    title = "CNN CPU vs GPU"
+}
+
+@misc{ISPC,
+    howpublished = "https://ispc.github.io/",
+    title = "ISPC"
+}
+
+@misc{KEN,
+  doi = {10.48550/ARXIV.2101.11049},
+  url = {https://arxiv.org/abs/2101.11049},
+  author = {Lueh, Guei-Yuan and Chen, Kaiyu and Chen, Gang and Fuentes, Joel and Chen, Wei-Yu and Fu, Fangwen and Jiang, Hong and Li, Hongzheng and Rhee, Daniel},
+  keywords = {Distributed, Parallel, and Cluster Computing (cs.DC), Programming Languages (cs.PL), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {C-for-Metal: High Performance SIMD Programming on Intel GPUs},
+  publisher = {arXiv},
+  year = {2021},
+  copyright = {Creative Commons Attribution 4.0 International}
+}
+
+@inproceedings{regalloc,
+author = {Chen, Wei-Yu and Lueh, Guei-Yuan and Ashar, Pratik and Chen, Kaiyu and Cheng, Buqi},
+title = {Register Allocation for Intel Processor Graphics},
+year = {2018},
+isbn = {9781450356176},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3168806},
+doi = {10.1145/3168806},
+abstract = {Register allocation is a well-studied problem, but surprisingly little work has been published on assigning registers for GPU architectures. In this paper we present the register allocator in the production compiler for Intel HD and Iris Graphics. Intel GPUs feature a large byte-addressable register file organized into banks, an expressive instruction set that supports variable SIMD-sizes and divergent control flow, and high spill overhead due to relatively long memory latencies. These distinctive characteristics impose challenges for register allocation, as input programs may have arbitrarily-sized variables, partial updates, and complex control flow. Not only should the allocator make a program spill-free, but it must also reduce the number of register bank conflicts and anti-dependencies. Since compilation occurs in a JIT environment, the allocator also needs to incur little overhead. To manage compilation overhead, our register allocation framework adopts a hybrid approach that separates the assignment of local and global variables. Several extensions are introduced to the traditional graph-coloring algorithm to support variables with different sizes and to accurately model liveness under divergent branches. Different assignment polices are applied to exploit the trade-offs between minimizing register usage and avoiding bank conflicts and anti-dependencies. Experimental results show our framework produces very few spilling kernels and can improve RA JIT time by up to 4x over pure graph-coloring. Our round-robin and bank-conflict-reduction assignment policies can also achieve up to 20% runtime improvements.},
+booktitle = {Proceedings of the 2018 International Symposium on Code Generation and Optimization},
+pages = {352–364},
+numpages = {13},
+keywords = {Register Allocation, GPU, JIT compilers},
+location = {Vienna, Austria},
+series = {CGO 2018}
+}
